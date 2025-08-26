@@ -1,0 +1,39 @@
+{
+  "name": "jumpx",
+  "version": "2.3.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.1",
+    "@types/aos": "^3.0.7",
+    "@types/fslightbox-react": "^1.7.7",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
+    "axios": "^1.11.0",
+    "fslightbox-react": "^1.7.6",
+    "next": "^15.4.5",
+    "nodemailer": "^7.0.5",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
+    "sharp": "^0.34.3",
+    "sweetalert2": "^11.22.2",
+    "sweetalert2-react-content": "^5.1.0",
+    "swiper": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "sass": "^1.70.0",
+    "typescript": "^5.9.2"
+  }
+}
