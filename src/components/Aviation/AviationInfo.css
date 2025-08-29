@@ -1,0 +1,62 @@
+.aviation-section {
+  background: #ffffff;
+  padding: 4rem 1.5rem;
+}
+
+.aviation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .aviation-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.aviation-text {
+  color: #333333;
+}
+
+.aviation-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0b2e63;
+  margin-bottom: 1.5rem;
+}
+
+.aviation-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555555;
+  margin-bottom: 2rem;
+}
+
+.aviation-btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background: #1dd3f8;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aviation-btn:hover {
+  background: #005f82;
+  box-shadow: 0 4px 15px rgba(0, 114, 160, 0.3);
+}
+
+.aviation-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}

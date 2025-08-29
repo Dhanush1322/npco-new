@@ -15,19 +15,18 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, link, submenu }) => {
   const isActive = pathname === link;
 
   return (
-   
-    <>
-     <li className={`nav-item ${submenu ? "dropdown" : ""}`} key={label}>
+    <li className={`nav-item ${submenu ? "dropdown" : ""}`} key={label}>
+      {/* 👇 Parent is always clickable */}
       <Link
         href={link}
         className={`nav-link ${isActive ? "active" : ""} ${
           submenu ? "dropdown-toggle" : ""
         }`}
-        onClick={(e) => submenu && e.preventDefault()}
       >
         {label} {submenu && <i className="bx bx-chevron-down"></i>}
       </Link>
 
+      {/* 👇 Submenu (opens on hover via CSS) */}
       {submenu && (
         <ul className="dropdown-menu">
           {submenu.map((subItem) => (
@@ -36,8 +35,6 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, link, submenu }) => {
         </ul>
       )}
     </li>
-    
-    </>
   );
 };
 

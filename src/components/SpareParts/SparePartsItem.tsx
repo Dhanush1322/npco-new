@@ -136,7 +136,7 @@ const SparePartsItem: React.FC = () => {
                 <TableRow key={index} hover>
                   <TableCell>{part.partNumber}</TableCell>
                   <TableCell>{part.description}</TableCell>
-                  <TableCell>{part.quantity}</TableCell>
+                  <TableCell>1</TableCell>
                   <TableCell>
                     <Box display="flex" gap={1}>
                       <Tooltip title="WhatsApp">

@@ -134,11 +134,11 @@ export const menus = [
     submenu: [
       {
         label: "Aviation",
-        link: "/aviation/",
+        link: "/aviation",
         submenu: [
           {
-            label: "Maintenance",
-            link: "/aviation/maintenance/",
+            label: "Line Maintenance",
+            link: "/aviation/linemaintanence",
           },
           {
             label: "GSE",
@@ -146,7 +146,7 @@ export const menus = [
           },
           {
             label: "Spare Parts",
-            link: "/spar-parts/",
+            link: "/aviation/spar-parts/",
           },
         ],
       },
@@ -162,7 +162,7 @@ export const menus = [
   },
   {
     label: "Licenses and Certificates",
-    link: "#",
+    link: "/licenses",
   },
   {
     label: "Blog",

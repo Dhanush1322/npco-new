@@ -116,6 +116,13 @@ const SpareDetails: React.FC = () => {
           />
         ))}
       </div>
+      <style jsx>{`
+      .single-business{
+      margin-left:-70px;
+      }
+      `}
+
+      </style>
     </section>
   );
 };
