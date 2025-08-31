@@ -62,7 +62,7 @@ const WhyChooseUs: React.FC = () => {
                 data-aos-delay="500"
               >
                 <Image
-                  src="/images/choose-img.png"
+                  src="/blog/b4.webp"
                   alt="NPCO Aviation & Ground Support"
                   width={807}
                   height={704}

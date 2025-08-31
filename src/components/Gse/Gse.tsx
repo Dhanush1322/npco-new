@@ -9,7 +9,11 @@ const Gse = () => {
     <section className="gse-section">
       <div className="gse-container">
         {/* Text Section */}
-        <div className="gse-text">
+        <div
+          className="gse-text"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        >
           <h2 className="gse-title">GSE Services</h2>
           <p className="gse-description">
             We provide and maintain Ground Support Equipment (GSE) and
@@ -26,18 +30,27 @@ const Gse = () => {
         </div>
 
         {/* Image Section */}
-        <div className="gse-image">
+        <div
+          className="gse-image"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
           <Image
             src="/gse/gse.jpg" // ✅ replace with your image
             alt="Ground Support Equipment"
             width={500}
             height={350}
+            className="rounded shadow-lg"
           />
         </div>
       </div>
 
       {/* Levels Section */}
-      <div className="gse-levels">
+      <div
+        className="gse-levels"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
         <h3 className="levels-title">Line Maintenance Aircraft Levels</h3>
         <ul className="levels-list">
           <li>1. Preventive Maintenance</li>

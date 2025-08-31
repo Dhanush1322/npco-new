@@ -1,28 +1,45 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
-import "./AviationInfo.css"; // ✅ Import external CSS
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Link from "next/link"; // ✅ Next.js link
+import "./AviationInfo.css"; // ✅ External CSS
 
 const AviationInfo = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // ✅ AOS init
+  }, []);
+
   return (
     <section className="aviation-section">
       <div className="aviation-container">
         {/* Text Section */}
-        <div className="aviation-text">
+        <div
+          className="aviation-text"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
           <h2 className="aviation-title">LINE MAINTENANCE</h2>
           <p className="aviation-description">
             We provide line maintenance services that offer any kind of
             technical assistance, from routine turnaround and overnight checks,
             to rectification of non-routine aircraft log entries.
           </p>
-          <button className="aviation-btn">Learn More</button>
+          <Link href="/aviation/linemaintanence"> 
+            <button className="aviation-btn">Learn More</button>
+          </Link>
         </div>
 
         {/* Image Section */}
-        <div className="aviation-image">
+        <div
+          className="aviation-image"
+          data-aos="fade-left"
+          data-aos-delay="400"
+        >
           <Image
-            src="/aviation/aviation.jpg" // ✅ Replace with your actual image path
+            src="/aviation/aviation.jpg"
             alt="Aviation Maintenance"
             width={500}
             height={350}

@@ -57,6 +57,7 @@ import Footer from "../components/Layouts/Footer";
 import WeSupply from "@/components/HomeFour/WeSupply";
 import OurTeam from "@/components/HomeFour/OurTeam";
 import Partner from "@/components/Common/Partner";
+import Location from "@/components/Location/Location";
 export default function Home() {
   return (
     <>
@@ -89,7 +90,7 @@ export default function Home() {
         <Partner />
 
         <PartnerSliderTwo />
-        <Newsletter />
+        <Location />
 
         {/* <News /> */}
 

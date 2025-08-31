@@ -1,12 +1,18 @@
 // Marine.jsx
-import React from "react";
-import "./Marine.css"; // external CSS file
+"use client"
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./Marine.css";
 
 const Marine = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true }); // animation duration
+  }, []);
+
   return (
-    <div className="marine-container">
-      <h1 className="marine-title">Marine Maintenance and Services</h1>
-      <p className="marine-description">
+    <div className="marine-container" data-aos="fade-up">
+      <p className="marine-description" data-aos="fade-right">
         We provide professional, reliable services and solutions in the marine
         maintenance for the military and civil sectors. We offer the experience
         and credibility of our staff and our best practices, which are developed
@@ -15,19 +21,22 @@ const Marine = () => {
         of them.
       </p>
 
-      <h2 className="marine-subtitle">Maintenance and Services</h2>
+      <h2 className="marine-subtitle" data-aos="zoom-in">
+        Maintenance and Services
+      </h2>
+
       <ul className="marine-list">
-        <li>⚙️ Engine Services</li>
-        <li>🔌 Electrical System</li>
-        <li>🛠️ Body and Hull</li>
-        <li>🚤 Propulsion System</li>
-        <li>📡 Communication & Navigation</li>
+        <li data-aos="fade-up" data-aos-delay="100">⚙️ Engine Services</li>
+        <li data-aos="fade-up" data-aos-delay="200">🔌 Electrical System</li>
+        <li data-aos="fade-up" data-aos-delay="300">🛠️ Body and Hull</li>
+        <li data-aos="fade-up" data-aos-delay="400">🚤 Propulsion System</li>
+        <li data-aos="fade-up" data-aos-delay="500">📡 Communication & Navigation</li>
       </ul>
 
       <div className="marine-images">
-        <img src="/marine/marin.jpg" alt="Marine Service 1" />
-        <img src="/marine/marin1.jpg" alt="Marine Service 2" />
-        <img src="/marine/marin2.jpg" alt="Marine Service 3" />
+        <img src="/marine/marin.jpg" alt="Marine Service 1" data-aos="flip-left" />
+        <img src="/marine/marin1.jpg" alt="Marine Service 2" data-aos="flip-up" />
+        <img src="/marine/marin2.jpg" alt="Marine Service 3" data-aos="flip-right" />
       </div>
     </div>
   );

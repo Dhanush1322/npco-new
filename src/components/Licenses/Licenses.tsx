@@ -66,15 +66,26 @@ const Licenses: React.FC = () => {
     <>
       <div className="case-area pb-100 bg-gray-100">
         <div className="container">
-          <div className="section-title home-four-section-title">
+          {/* ✅ Section Title with AOS */}
+          <div
+            className="section-title home-four-section-title"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
             <span>{licenseData.section.subtitle}</span>
             <h2>{licenseData.section.title}</h2>
           </div>
 
-          {/* ✅ 3-column grid */}
+          {/* ✅ 3-column grid with AOS stagger */}
           <div className="row">
             {licenseData.certificates.map((cert, index) => (
-              <div key={index} className="col-lg-4 col-md-6 mb-4">
+              <div
+                key={index}
+                className="col-lg-4 col-md-6 mb-4"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay={index * 200} // stagger animation
+              >
                 <div className="case-wrap case-style-2">
                   <div className="single-case">
                     {/* Fixed Image Size */}
@@ -99,7 +110,7 @@ const Licenses: React.FC = () => {
                   </div>
 
                   {/* Title + License Number */}
-                  <h3  className="license-title">{cert.title}</h3>
+                  <h3 className="license-title">{cert.title}</h3>
                   <p className="license-number">{cert.licenseNumber}</p>
                 </div>
               </div>
@@ -132,9 +143,9 @@ const Licenses: React.FC = () => {
           color: #bbb;
           margin-top: 5px;
         }
-          .license-title{
-          color:white;
-          }
+        .license-title {
+          color: white;
+        }
       `}</style>
     </>
   );
