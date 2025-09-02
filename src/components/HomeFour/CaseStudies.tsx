@@ -12,6 +12,11 @@ const CaseStudies: React.FC = () => {
       title: "Latest News",
     },
     cases: [
+       {
+        image: { src: "/blog/booeing.jpg", alt: "Image" },
+        title: "Boeing Supplier",
+        link: "/case-studies/case-studies-details6",
+      },
       {
         image: { src: "/blog/b1.webp", alt: "Image" },
         title: "Ground Support Equipment (GSE)",
@@ -65,13 +70,16 @@ const CaseStudies: React.FC = () => {
               >
                 <div className="case-wrap case-style-2">
                   <div className="single-case">
-                    <Image
-                      src={caseItem.image.src}
-                      alt={caseItem.image.alt}
-                      className="w-100"
-                      width={385}
-                      height={400}
-                    />
+                   <div className="image-wrapper">
+  <Image
+    src={caseItem.image.src}
+    alt={caseItem.image.alt}
+    fill
+    className="image"
+  />
+</div>
+
+
                     <Link href={caseItem.link} className="link-icon">
                       <i className="bx bx-plus"></i>
                     </Link>
@@ -88,6 +96,19 @@ const CaseStudies: React.FC = () => {
       </div>
 
       <style jsx>{`
+      .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px; /* fixed height you want */
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover; /* makes sure it doesn’t stretch */
+}
+
+      .single-case {
+      }
         .case-area {
           background-color: #04063c; /* same bg color */
           padding-top: 200px;

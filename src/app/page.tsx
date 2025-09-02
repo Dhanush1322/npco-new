@@ -42,7 +42,7 @@ import React from "react";
 import Navbar from "../components/Layouts/Navbar";
 import MainBanner from "../components/HomeFour/MainBanner";
 import PartnerSliderTwo from "../components/Common/PartnerSliderTwo";
-import About from "../components/HomeFour/About";
+
 import Services from "../components/HomeFour/Services";
 import WhyChooseUs from "../components/HomeFour/WhyChooseUs";
 import MakeYourBusiness from "../components/HomeFour/MakeYourBusiness";
@@ -58,6 +58,8 @@ import WeSupply from "@/components/HomeFour/WeSupply";
 import OurTeam from "@/components/HomeFour/OurTeam";
 import Partner from "@/components/Common/Partner";
 import Location from "@/components/Location/Location";
+import About from "@/components/About/About";
+import TimeLine from "@/components/TimeLine/TimeLine";
 export default function Home() {
   return (
     <>
@@ -69,8 +71,8 @@ export default function Home() {
 
         <About />
         <WhyChooseUs />
-
-        <Services />
+        <TimeLine />
+        {/* <Services /> */}
 
         <WeSupply />
         <Team />

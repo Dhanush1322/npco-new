@@ -1,24 +1,24 @@
 import React from "react";
 import Navbar from "../../../components/Layouts/Navbar";
 import PageBanner from "../../../components/Common/PageBanner";
-import CaseStudiesDetailsContent from "../../../components/CaseStudiesDetails/CaseStudiesDetailsContent5";
+import CaseStudiesDetailsContent from "../../../components/CaseStudiesDetails/CaseStudiesDetailsContent6";
 import CTA from "../../../components/Common/CTA";
 import Footer from "../../../components/Layouts/Footer";
-import FaqContent from "@/components/Faq/FaqContent4";
+import FaqContent from "@/components/Faq/FaqContent6";
 export default function Page() {
   return (
     <>
       <Navbar />
 
       <PageBanner
-        pageTitle="Aircraft Consumables and Expendables"
+        pageTitle="Boeing Supplier"
         homePageUrl="/"
         homePageText="Home"
-        activePageText="Aircraft Consumables and Expendables"
+        activePageText="Boeing Supplier"
       />
 
       <CaseStudiesDetailsContent />
-<FaqContent />
+<FaqContent/>
       <CTA />
 
       <Footer />

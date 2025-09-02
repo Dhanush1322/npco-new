@@ -42,19 +42,19 @@ const Licenses: React.FC = () => {
         pdf: "/certificates/c5.pdf",
       },
       {
-        image: { src: "/licence/l6.PNG", alt: "Certificate 6" },
+        image: { src: "/licence/duns.png", alt: "Certificate 6" },
         title: "Aircraft Maintenance License",
         licenseNumber: "License No: NPCO-MNT-006",
         pdf: "/certificates/c6.pdf",
       },
       {
-        image: { src: "/licence/l7.PNG", alt: "Certificate 7" },
+        image: { src: "/licence/soudi.jpg", alt: "Certificate 7" },
         title: "Quality Assurance Certificate",
         licenseNumber: "License No: NPCO-QA-007",
         pdf: "/certificates/c7.pdf",
       },
       {
-        image: { src: "/licence/l8.PNG", alt: "Certificate 8" },
+        image: { src: "/licence/jami.png", alt: "Certificate 8" },
         title: "International Aviation Standard",
         licenseNumber: "License No: NPCO-INT-008",
         pdf: "/certificates/c8.pdf",
@@ -129,7 +129,7 @@ const Licenses: React.FC = () => {
         .image-wrapper {
           position: relative;
           width: 100%;
-          height: 250px; /* ✅ fixed height */
+          height: 150px; /* ✅ fixed height */
           overflow: hidden;
           border-radius: 8px;
         }
