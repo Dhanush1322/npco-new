@@ -236,11 +236,11 @@ const SparePartsItem: React.FC = () => {
 
         const jsonData: any[] = XLSX.utils.sheet_to_json(sheet);
 
-      const mappedData: Part[] = jsonData.map((row) => ({
-  partNumber: row["PN"] ? String(row["PN"]) : "",
-  description: row["DESCRIPTION"] ? String(row["DESCRIPTION"]) : "",
-  quantity: row["QTY"] ? Number(row["QTY"]) : 0,
-}));
+        const mappedData: Part[] = jsonData.map((row) => ({
+          partNumber: row["PN"] ? String(row["PN"]) : "",
+          description: row["DESCRIPTION"] ? String(row["DESCRIPTION"]) : "",
+          quantity: row["QTY"] ? Number(row["QTY"]) : 0,
+        }));
 
         setAllParts(mappedData);
       } catch (error) {
@@ -251,15 +251,15 @@ const SparePartsItem: React.FC = () => {
     fetchExcel();
   }, []);
 
-// 🔍 Filtered data (safe against undefined)
-const filteredParts = allParts.filter((item) => {
-  const partNum = (item.partNumber || "").toLowerCase();
-  const desc = (item.description || "").toLowerCase();
-  return (
-    partNum.includes(search.toLowerCase()) ||
-    desc.includes(search.toLowerCase())
-  );
-});
+  // 🔍 Filtered data (safe against undefined)
+  const filteredParts = allParts.filter((item) => {
+    const partNum = (item.partNumber || "").toLowerCase();
+    const desc = (item.description || "").toLowerCase();
+    return (
+      partNum.includes(search.toLowerCase()) ||
+      desc.includes(search.toLowerCase())
+    );
+  });
 
 
   // 📄 Pagination logic

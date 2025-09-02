@@ -23,7 +23,7 @@
 }
 
 .gse-title {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: #0b2e63;
   margin-bottom: 1.5rem;
@@ -46,43 +46,70 @@
 
 /* Levels Section */
 .gse-levels {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 3rem auto 0;
-  background: #f7faff;
-  padding: 2.5rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
 
-.levels-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #0b2e63;
-  margin-bottom: 1.5rem;
+  padding: 3rem;
+  border-radius: 15px;
+
   text-align: center;
 }
 
-.levels-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.levels-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #0b2e63;
+  margin-bottom: 2rem;
+}
+
+/* Grid of Cards */
+.levels-grid {
   display: grid;
-  gap: 0.8rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
-.levels-list li {
+@media (min-width: 768px) {
+  .levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .levels-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.level-card {
   background: #ffffff;
-  padding: 0.8rem 1.2rem;
-  border-left: 5px solid #0072a0;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #444;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
-.levels-list li:hover {
-  transform: translateX(5px);
-  box-shadow: 0 6px 15px rgba(0, 114, 160, 0.15);
+.level-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.level-icon {
+  font-size: 2.5rem;
+  color: #1dd3f8;
+  margin-bottom: 1rem;
+}
+
+.level-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0b2e63;
+  margin-bottom: 0.8rem;
+}
+
+.level-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }

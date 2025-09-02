@@ -4,7 +4,14 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./Railway.css"; // ✅ External CSS
+import {
+  FaCogs,
+  FaTools,
+  FaWrench,
+  FaTrain,
+  FaClipboardCheck,
+} from "react-icons/fa";
+import "./Railway.css";
 
 const Railway = () => {
   useEffect(() => {
@@ -20,14 +27,15 @@ const Railway = () => {
           <p className="railway-description">
             NPCO serves the railway industry in three categories:{" "}
             <b>Surface Railways, Elevated Railways, and Underground Railways</b>.
-            NPCO is a maintenance & service provider in the Kingdom of Saudi
-            Arabia with a maintenance center built on the highest level of
-            Quality and Safety standards.
+            We are a trusted <b>maintenance & service provider</b> in the Kingdom
+            of Saudi Arabia with a dedicated maintenance center built on the
+            highest Quality and Safety standards.
           </p>
           <p className="railway-description">
-            We can track, inventorize, and assist for preventive maintenance
-            checks, repairs, and record keeping. We provide 24/7 support, with
-            outstanding customer care.
+            We handle preventive maintenance, repairs, and inventory management
+            with precision. Our support teams are available <b>24/7</b> to
+            deliver outstanding customer care and ensure uninterrupted
+            operations.
           </p>
         </div>
 
@@ -62,15 +70,46 @@ const Railway = () => {
 
       {/* Services Section */}
       <div className="railway-services" data-aos="fade-up">
-        <h3 className="services-title">Maintenance and Services</h3>
+        <h3 className="services-title">Maintenance and Support</h3>
         <p className="services-description">
-          We provide preventive and emergency maintenance services for support
-          equipment. Ground Support Equipment Maintenance, Mobile Repairs,
-          Welding, Electrical System Repair, and Hydraulic System Repair are
-          currently available across the Kingdom of Saudi Arabia. Our repair
-          service focuses on preventive maintenance and ongoing support to
-          maintain the maximum availability of maintenance equipment.
+          NPCO provides reliable <b>preventive</b> and <b>emergency maintenance</b>{" "}
+          services for railway support equipment across Saudi Arabia. Our services
+          cover Ground Support Equipment Maintenance, Mobile Repairs, Welding,
+          Electrical, and Hydraulic System Repairs — all focused on maximizing
+          availability and performance.
         </p>
+
+        {/* Detailed Services */}
+        <div className="railway-services-grid">
+          <div className="service-card" data-aos="fade-up" data-aos-delay="100">
+            <FaCogs className="service-icon" />
+            <h4>Supplying Spare Parts & Consumables</h4>
+            <p>
+              We source and supply <b>genuine spare parts and consumables</b> for
+              railway systems, ensuring long-term reliability and reduced downtime.
+            </p>
+          </div>
+
+          <div className="service-card" data-aos="fade-up" data-aos-delay="200">
+            <FaTools className="service-icon" />
+            <h4>Supplying Tools & Safety Equipment</h4>
+            <p>
+              Providing high-quality <b>tools, safety gear, and maintenance
+              equipment</b> to meet the demanding requirements of railway
+              operations.
+            </p>
+          </div>
+
+          <div className="service-card" data-aos="fade-up" data-aos-delay="300">
+            <FaWrench className="service-icon" />
+            <h4>Preventive & Emergency Maintenance</h4>
+            <p>
+              From routine inspections to urgent breakdown repairs, NPCO ensures
+              <b>24/7 maintenance services</b> that guarantee operational
+              continuity and safety.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
