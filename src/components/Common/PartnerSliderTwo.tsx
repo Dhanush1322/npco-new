@@ -6,25 +6,25 @@ import { Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 
 const partnerData = [
- 
-  {
-    image: "client/2.png",
-    url: "#",
-  },
-  {
-     image: "client/3.png",
-    url: "#",
-  },
-  {
-    image: "client/4.png",
-    url: "#",
-  },
+
   {
     image: "client/5.png",
     url: "#",
   },
   {
-    image: "client/6.png",
+    image: "client/2.png",
+    url: "#",
+  },
+  {
+    image: "client/honeywell-logo.svg",
+    url: "#",
+  },
+  {
+    image: "client/8.png",
+    url: "#",
+  },
+  {
+    image: "client/arr.svg",
     url: "#",
   },
   {
@@ -32,10 +32,10 @@ const partnerData = [
     url: "#",
   },
   {
-     image: "client/8.png",
+    image: "client/4.png",
     url: "#",
   },
-  
+
 ];
 
 const PartnerSliderTwo: React.FC = () => {
@@ -74,21 +74,21 @@ const PartnerSliderTwo: React.FC = () => {
             modules={[Navigation, Autoplay]}
             className="brand-slide text-center"
           >
-          {partnerData &&
-  partnerData.map((value, i) => (
-    <SwiperSlide key={i}>
-     
-        <div className="brand-logo">
-          <Image
-            src={value.image}
-            alt="Image"
-            width={130}
-            height={80}
-          />
-        </div>
-     
-    </SwiperSlide>
-  ))}
+            {partnerData &&
+              partnerData.map((value, i) => (
+                <SwiperSlide key={i}>
+
+                  <div className="brand-logo">
+                    <Image
+                      src={value.image}
+                      alt="Image"
+                      width={130}
+                      height={80}
+                    />
+                  </div>
+
+                </SwiperSlide>
+              ))}
 
           </Swiper>
         </div>
