@@ -36,6 +36,11 @@ const dosis = Dosis({
 export const metadata: Metadata = {
   title: "npco",
   description: "npco",
+  icons: {
+    icon: "/logo.webp",           // default favicon
+    shortcut: "/logo.webp",       // optional shortcut icon
+    apple: "/logo.webp", // for iOS
+  },
 };
 
 export default function RootLayout({

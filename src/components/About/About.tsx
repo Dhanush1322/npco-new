@@ -51,10 +51,10 @@ const About: React.FC = () => {
             <div className="col-lg-6" data-aos="fade-right">
               <div className="about-img">
                 <Image
-                  src={aboutData.image.src}
+                  src="/about/Mohammed bin Salman photo 500x500.png"
                   alt={aboutData.image.alt}
                   width={500}
-                  height={400}
+                  height={800}
                   className="rounded shadow"
                 />
               </div>

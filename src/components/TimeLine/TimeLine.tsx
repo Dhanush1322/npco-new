@@ -144,7 +144,7 @@ const TimeLine: React.FC = () => {
             <div className="col-lg-4" data-aos="zoom-in">
               <div className="industries-img text-center">
                 <Image
-                  src="/line/time.jpeg"
+                  src="/aviation/newpnnng.png"
                   alt={centerImage.alt}
                   width={370}
                   height={390}
