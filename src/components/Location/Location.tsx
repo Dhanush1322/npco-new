@@ -1,68 +1,46 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import "./Location.css";
 
 function Location() {
   const [scale, setScale] = useState(1);
   const minScale = 1;
   const maxScale = 3;
-  const containerRef = useRef<HTMLDivElement>(null);
 
-  // ✅ Handle scroll-based zoom
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    let lastScrollTop = 0;
-
-    const handleScroll = (e: Event) => {
-      const target = e.target as HTMLElement;
-      const scrollTop = target.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
-        // Scrolling Down → Zoom In
-        setScale((prev) => Math.min(prev + 0.02, maxScale));
-      } else {
-        // Scrolling Up → Zoom Out
-        setScale((prev) => Math.max(prev - 0.02, minScale));
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    };
-
-    container.addEventListener("scroll", handleScroll);
-
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // ✅ Manual Zoom Controls
-  const zoomIn = () => setScale((prev) => Math.min(prev + 0.2, maxScale));
-  const zoomOut = () => setScale((prev) => Math.max(prev - 0.2, minScale));
+  // ✅ Handle zoom with scroll
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    e.preventDefault(); // stop page from scrolling
+    if (e.deltaY > 0) {
+      // scroll down → zoom in
+      setScale((prev) => Math.min(prev + 0.1, maxScale));
+    } else {
+      // scroll up → zoom out
+      setScale((prev) => Math.max(prev - 0.1, minScale));
+    }
+  };
 
   return (
-    <div className="location-container">
-      {/* Zoom Buttons */}
-      <div className="location-controls">
-        <button onClick={zoomIn}>+</button>
-        <button onClick={zoomOut} disabled={scale <= minScale}>
-          -
-        </button>
-      </div>
-
-      {/* Scroll Area */}
-      <div className="location-scroll" ref={containerRef}>
-        <img
-          src="/location/location.jpeg"
-          alt="Our Location"
-          style={{
-            transform: `scale(${scale})`,
-            transformOrigin: "center center",
-            transition: "transform 0.2s ease-out", // ✅ smooth animation
-          }}
-        />
-      </div>
+    <div
+      className="location-container"
+      onWheel={handleWheel}
+      style={{
+        overflow: "hidden",
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      <img
+        src="/location/location.jpeg"
+        alt="Our Location"
+        style={{
+          transform: `scale(${scale})`,
+          transformOrigin: "center center", // always zoom from center
+          transition: "transform 0.3s ease-out", // smooth effect
+          width: "100%",
+          height: "auto",
+          display: "block",
+        }}
+      />
     </div>
   );
 }

@@ -60,14 +60,14 @@ import Partner from "@/components/Common/Partner";
 import Location from "@/components/Location/Location";
 import About from "@/components/About/About";
 import TimeLine from "@/components/TimeLine/TimeLine";
+import BannerPopup from "@/components/BannerPopup/BannerPopup";
 export default function Home() {
   return (
     <>
       <div className="body-bg-color">
         <Navbar />
-
+        <BannerPopup/>
         <MainBanner />
-
 
         <About />
         <WhyChooseUs />
