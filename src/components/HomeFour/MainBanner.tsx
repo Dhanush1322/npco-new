@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import FsLightbox from "fslightbox-react";
 import Image from "next/image";
@@ -15,7 +15,21 @@ import animateShape3 from "../../../public/images/home-one/shape/animate3.png";
 const MainBanner: React.FC = () => {
   // if toggler is updated when lightbox is closed it will open it
   const [toggler, setToggler] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [
+    "/slider/1.png",
+    "/slider/2.png",
+    "/slider/3.png",
+    "/slider/4.png",
+  ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // change every 3 sec
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
   return (
     <>
       <FsLightbox
@@ -50,7 +64,7 @@ const MainBanner: React.FC = () => {
                   data-aos-duration="800"
                   data-aos-delay="700"
                 >
-                  <Link href="/about" className="default-btn">
+                  <Link href="/#about" className="default-btn">
                     Learn More About NPCO
                   </Link>
 
@@ -64,12 +78,24 @@ const MainBanner: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-lg-6 pr-0">
+            {/* <div className="col-lg-6 pr-0">
               <div className="banner-four-main-img">
                 <Image
                   className="animate__animated animate__fadeInRight animate__fast"
                   src="/banner/banner.png"
                   alt="Image"
+                  width={1021}
+                  height={592}
+                />
+              </div>
+            </div> */}
+            <div className="col-lg-6 pr-0">
+              <div className="banner-four-main-img">
+                <Image
+                  key={currentIndex} // re-trigger animation when image changes
+                  className="animate__animated animate__fadeInRight animate__fast"
+                  src={images[currentIndex]}
+                  alt="Banner"
                   width={1021}
                   height={592}
                 />

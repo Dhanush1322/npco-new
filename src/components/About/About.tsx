@@ -44,20 +44,22 @@ const About: React.FC = () => {
 
   return (
     <>
-      <div className="about-area pt-100 pb-100">
+      <div className="about-area pt-100 pb-100" id="about">
         <div className="container">
           <div className="row align-items-center">
             {/* Image Section */}
             <div className="col-lg-6" data-aos="fade-right">
-              <div className="about-img">
-                <Image
-                  src="/about/Mohammed bin Salman photo 500x500.png"
-                  alt={aboutData.image.alt}
-                  width={500}
-                  height={800}
-                  className="rounded shadow"
-                />
-              </div>
+      <div className="about-img">
+  <Image
+    src="/about/Mohammed bin Salman photo 500x500.png"
+    alt={aboutData.image.alt}
+    width={500}
+    height={800}
+    className="image-main"
+  />
+  <div className="image-overlay"></div>
+</div>
+
             </div>
 
             {/* Content Section */}
@@ -98,6 +100,27 @@ const About: React.FC = () => {
 
       {/* Scoped styles */}
       <style jsx>{`
+      .about-img {
+  position: relative;
+  display: inline-block;
+}
+
+.image-main {
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* adjust fade height */
+  background: linear-gradient(to top, #010032 0%, transparent 100%);
+  border-radius: 0 0 8px 8px; /* match image border radius */
+}
+
       .about-area{
       overflow:hidden;
       }

@@ -152,6 +152,7 @@ const Marine = () => {
         <img src="/marine/marin1.jpg" alt="Marine Service 2" />
         <img src="/marine/marin2.jpg" alt="Marine Service 3" />
       </div>
+      
     </div>
   );
 };

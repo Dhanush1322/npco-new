@@ -43,7 +43,7 @@ const Railway = () => {
         <div className="railway-images">
           <div data-aos="zoom-in" data-aos-delay="100">
             <Image
-              src="/rail/rail.jpg"
+              src="/rail/KAFD-Station-1.webp"
               alt="Surface Railways"
               width={400}
               height={280}
@@ -51,7 +51,7 @@ const Railway = () => {
           </div>
           <div data-aos="zoom-in" data-aos-delay="200">
             <Image
-              src="/rail/rail2.jpg"
+              src="/rail/11.png"
               alt="Elevated Railways"
               width={400}
               height={280}
@@ -59,7 +59,7 @@ const Railway = () => {
           </div>
           <div data-aos="zoom-in" data-aos-delay="300">
             <Image
-              src="/rail/rail3.jpg"
+              src="/rail/Riyadh-Metro.jpg"
               alt="Underground Railways"
               width={400}
               height={280}
@@ -111,6 +111,35 @@ const Railway = () => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+      .railway-section {
+  position: relative;
+  background-image: url("/rail/NCPO OUTLINE DESIGN-07.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* White blur overlay */
+.railway-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 4, 4, 0.6); /* white overlay with opacity */
+
+  z-index: -1; /* keeps overlay behind content */
+}
+  .railway-description ,.services-description{
+  color: white;
+  font-weight:300;
+  }
+.railway-title , .services-title{
+color:white;
+}
+      `}
+
+      </style>
     </section>
   );
 };
